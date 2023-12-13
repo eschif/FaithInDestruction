@@ -1,5 +1,5 @@
 body {
-    background-image: url(../media/greenCaustics.jpg), linear-gradient(rgba(37, 165, 11, 0.568),rgba(130, 179, 76, 0.733));
+    background-image: url('../media/greenCaustics.jpg'), linear-gradient(rgba(37, 165, 11, 0.568),rgba(130, 179, 76, 0.733));
     background-blend-mode: overlay;;
     /* background-color: #b7e999; */
     margin: 100px;
