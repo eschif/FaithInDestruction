@@ -1,0 +1,412 @@
+body {
+    background-image: url('/public/media/greenCaustics.jpg'), linear-gradient(rgba(37, 165, 11, 0.568),rgba(130, 179, 76, 0.733));
+    background-blend-mode: overlay;;
+    /* background-color: #b7e999; */
+    margin: 100px;
+}
+
+/* .webGazer {
+    display: none !important;
+    visibility: hidden !important;
+    z-index: -2;
+    opacity: 0.0;
+} */
+
+#webgazerVideoContainer {
+    display: none !important;
+}
+
+#webgazerGazeDot {
+    display: none !important;
+}
+
+#elli {
+    top: 30px;
+    left: 25px;
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(#2f8b04, #62c72cf1);
+    box-shadow: -80px -80px -80px #a3f872e3 inset,-80px -80px -80px #96e06bc7 inset;
+    border-radius: 50%;
+    z-index: 2; /* set higher z-index value */
+    position: relative; /* position must be set for z-index to work */
+    filter: blur(50px);
+}
+
+#lil-ellipses {
+    top: 30px;
+    left: 25px;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(#5c7053, #192512);
+    box-shadow: -80px -80px -80px #323b2c inset,-80px -80px -80px #2f7407 inset;
+    border-radius: 50%;
+    z-index: 3; /* set higher z-index value */
+    position: relative; /* position must be set for z-index to work */
+    filter: blur(20px);
+}
+
+.ellipses {
+    top: 30px;
+    left: 25px;
+    width: 4000px;
+    height: 4000px;
+    background: radial-gradient(#f6faf4, #f9fff6);
+    box-shadow: -80px -80px -80px #deffc8 inset,-80px -80px -80px #bff1a3 inset;
+    border-radius: 50%;
+    z-index: 3; /* set higher z-index value */
+    /* position: relative; position must be set for z-index to work */
+    filter: blur(20px);
+}
+
+.vertical-text {
+    writing-mode:vertical-lr;
+    white-space:inherit;
+    text-orientation: upright;
+    position: absolute;
+    z-index: 1;
+    color: rgb(197, 255, 182);
+    text-shadow: 0 0 10px rgb(237, 253, 243), 0 0 1em rgb(102, 255, 102),
+    0 0 0.2em rgb(238, 238, 255);
+    animation: flight-top-to-bottom 18s linear infinite;
+    font-style: italic;
+    top: 20%;
+    bottom: -50%;
+}
+
+@keyframes scroll-up-down {
+    0% {
+        transform: translateY(-200%);
+    }
+    100% {
+        transform: translateY(120%);
+    }
+}
+@keyframes scroll-up-down-fwd {
+    0% {
+        transform: translateY(300vh);
+        transform: translateZ(0);
+        /* transform: scale(10%); */
+    }
+    100% {
+        transform: translateY(-300vh);
+        transform: translateZ(100);
+        /* transform: scale(200%); */
+    }
+}
+
+.vertical-text2 {
+    font-family: 'Genos';
+    font-size: x-large;
+    white-space: pre-line;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    padding-left: 30%;
+    z-index: 1;
+    color: rgb(239, 250, 221);
+    text-shadow: 0 0 10px rgb(152, 255, 105), 0 0 1em rgb(30, 236, 30),
+    0 0 0.2em rgb(27, 202, 129);
+    height: 100%;
+    animation: flight-top-to-bottom 22s linear infinite;
+}
+
+.vertical-text3 {
+    font-family: 'Felipa';
+    font-style: italic;
+    padding-left: 160%;
+    line-height: 30px;
+    font-size: x-large;
+    white-space: pre-line;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    z-index: 1;
+    color: rgb(239, 250, 221);
+    text-shadow: 0 0 10px rgb(152, 255, 105), 0 0 1em rgb(30, 236, 30),
+    0 0 0.2em rgb(27, 202, 129);
+    height: 100%;
+    animation: flight-bottom-to-top 10s linear infinite;
+}
+
+.vertical-text4 {
+    font-family: 'Tektur';
+    font-size: larger;
+    padding-left: 170%;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    position: absolute;
+    z-index: 1;
+    color: rgb(214, 252, 197);
+    text-shadow: 0 0 10px rgb(206, 252, 184), 0 0 1em rgb(120, 231, 68),
+    0 0 0.2em rgb(0, 207, 62);
+    height: 100%;
+    animation: flight-bottom-to-top 15s linear infinite;
+}
+.vertical-text5 {
+    font-family: 'Chakra Petch';
+    font-size: larger;
+    padding-left: 190%;
+    white-space: nowrap;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    position: absolute;
+    z-index: 1;
+    color: rgb(230, 248, 222);
+    text-shadow: 0 0 10px rgb(206, 252, 184), 0 0 1em rgb(56, 104, 34),
+    0 0 0.2em rgb(0, 207, 62);
+    height: -100%;
+    perspective: 550px;
+    transform-style: preserve-3d;
+    animation: scroll-up-down-fwd 45s linear infinite;
+}
+.vertical-text6 {
+    font-family: 'Almendra';
+    font-size: larger;
+    padding-left: 20%;
+    white-space: nowrap;
+    word-spacing: 2px;
+    letter-spacing: 4px;
+    writing-mode: vertical-lr;
+    text-orientation: sideways-right;
+    position: absolute;
+    z-index: 1;
+    color: rgb(83, 255, 126);
+    text-shadow: 0 0 10px rgb(95, 129, 79), 0 0 1em rgb(255, 255, 255),
+    0 0 0.2em rgb(150, 255, 182);
+    height: 100%;
+    animation: scroll-up-down 15s linear infinite;
+}
+.vertical-text7 {
+    font-family: 'Almendra';
+    font-size: larger;
+    padding-left: 50%;
+    word-spacing: 2px;
+    letter-spacing: 4px;
+    writing-mode: vertical-lr;
+    text-orientation:upright;
+    position: absolute;
+    z-index: 1;
+    color: rgb(43, 236, 101);
+    text-shadow: 0 0 10px rgb(200, 240, 181), 0 0 1em rgb(183, 241, 45),
+    0 0 0.2em rgb(150, 255, 80);
+    height: 100%;
+    animation: scroll-up-down 15s linear infinite;
+}
+
+@keyframes flight-right-to-left {
+    0%{
+        transform: translateX(190%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+@keyframes flight-left-to-right {
+    0%{
+        transform:scale(60%);
+        transform: translateX(-100%);
+    }
+    100%{
+        transform:scale(120%);
+        transform: translateX(110%);
+    }
+}
+@keyframes flight-top-to-bottom {
+    0%{
+        transform: translateY(-100%);
+        /* transform:scale(110%); */
+    }
+    100%{
+        transform: translateY(100%);
+        /* transform:scale(70%); */
+    }
+}
+
+@keyframes flight-bottom-to-top {
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(-80%);
+    }
+}
+
+.horizontal-text {
+    writing-mode: sideways-lr;
+    text-orientation: sideways;
+    padding-left: 10%;
+    letter-spacing: 40px;
+    position: absolute;
+    top: 5% 50%;
+    z-index: 1;
+    color:rgb(93, 226, 15);
+    text-shadow: 0 0 25px rgb(217, 255, 232);
+    overflow: hidden;
+    animation: flight-left-to-right 30s linear infinite;
+}
+
+.horizontal-text2 {
+    font-family: 'Cinzel';
+    font-size: larger;
+    writing-mode: sideways-rl;
+    text-orientation: sideways-right;
+    padding-left: 10px;
+    word-spacing: -1px;
+    letter-spacing: 4px;;
+    position: absolute;
+    top: 5%;
+    z-index: 1;
+    color:rgb(235, 255, 227);
+    text-shadow: 0 0 10px rgb(47, 211, 107), 0 0 10px rgb(102, 255, 102);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-right-to-left 52s linear infinite;
+}
+
+.horizontal-text3 {
+    font-family: 'Genos';
+    white-space: nowrap;
+    writing-mode: sideways-rl;
+    text-orientation: sideways-right;
+    padding-top: 80px;
+    word-spacing: -3px;
+    position: absolute;
+    top: 25% 40%;
+    z-index: 1;
+    color:rgb(210, 255, 205);
+    text-shadow: 0 0 2px rgb(107, 255, 102),
+    0 0 0.2em rgb(48, 133, 9);
+    animation: flight-right-to-left 16s linear infinite;
+}
+
+.horizontal-text4 {
+    font-family: 'Almendra';
+    white-space: nowrap;
+    top: 300px;
+    overflow: hidden;
+    font-size: large;
+    writing-mode: sideways-lr;
+    text-orientation: sideways-right;
+    padding-left: 50px;
+    padding-top: 90px;
+    word-spacing: 15px;
+    position: absolute;
+    top: 15% 30%;
+    z-index: 1;
+    color:rgb(219, 255, 214);
+    text-shadow: 0 0 5px rgb(204, 255, 194);
+    animation: flight-left-to-right 20s linear infinite;
+}
+
+.horizontal-text5 {
+    writing-mode: sideways-lr;
+    font-size: larger;
+    text-orientation: sideways-right;
+    word-spacing: 10px;
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    font-style: italic;
+    color:rgb(27, 206, 4);
+    text-shadow: 0 0 10px rgb(212, 255, 219), 0 0 5px rgb(185, 255, 183);
+    overflow: hidden;
+    animation: flight-left-to-right 15s linear infinite;
+}
+
+.horizontal-text6 {
+    font-family: 'Felipa';
+    font-size: x-large;
+    writing-mode: sideways-lr;
+    text-orientation: sideways-right;
+    top: 545px;
+    word-spacing: 10px;
+    position: absolute;
+    top: 105% 300%;
+    z-index: 1;
+    color:rgb(35, 155, 19);
+    text-shadow: 0 0 10px rgb(212, 255, 219), 0 0 5px rgb(185, 255, 183);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-left-to-right 25s linear infinite;
+}
+
+.horizontal-text7 {
+    font-family: 'Felipa';
+    font-size: larger;
+    writing-mode: sideways-lr;
+    text-orientation: sideways-right;
+    top: 345px;
+    word-spacing: 5px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 105% 300%;
+    z-index: 1;
+    color:rgb(232, 248, 229);
+    text-shadow: 0 0 10px rgb(50, 230, 80), 0 0 5px rgb(39, 172, 34);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-right-to-left 145s linear infinite;
+}
+.horizontal-text8 {
+    font-family: 'Felipa';
+    font-size: xx-large;
+    writing-mode: sideways-lr;
+    text-orientation: sideways-right;
+    top: 425px;
+    word-spacing: 5px;
+    letter-spacing: 4px;
+    position: absolute;
+    top: 105% 300%;
+    z-index: 1;
+    color:rgb(18, 221, 96);
+    text-shadow: 0 0 10px rgb(223, 255, 228), 0 0 5px rgb(115, 179, 113);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-right-to-left 25s linear infinite;
+}
+.horizontal-text9 {
+    font-family: 'Felipa';
+    font-size: large;
+    writing-mode: sideways-lr;
+    text-orientation: sideways;
+    top: 540px;
+    word-spacing: 5px;
+    letter-spacing: 4px;
+    position: absolute;
+    z-index: 1;
+    color:rgb(102, 255, 140);
+    text-shadow: 0 0 10px rgb(235, 255, 238), 0 0 5px rgb(238, 255, 238);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-right-to-left 48s linear infinite;
+}
+.horizontal-text10 {
+    font-family: 'Felipa';
+    font-size: x-large;
+    top: 5px;
+    word-spacing: 7px;
+    letter-spacing: 4px;
+    position: absolute;
+    z-index: 1;
+    color:rgb(70, 233, 124);
+    text-shadow: 0 0 5px rgb(101, 252, 123), 0 0 3px rgb(235, 255, 203);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-left-to-right 25s linear infinite;
+}
+.horizontal-text11 {
+    font-family: 'Felipa';
+    font-size: large;
+    top: 240px;
+    word-spacing: 7px;
+    letter-spacing: 4px;
+    position: absolute;
+    z-index: 1;
+    color:rgb(110, 236, 99);
+    text-shadow: 0 0 5px rgb(62, 150, 76), 0 0 3px rgb(235, 255, 203);
+    overflow: hidden;
+    white-space: nowrap;
+    animation: flight-right-to-left 15s linear infinite;
+}
